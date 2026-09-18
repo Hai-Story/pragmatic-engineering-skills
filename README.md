@@ -19,6 +19,8 @@ When existing code differs from a recommended practice, the agent classifies the
 
 Every actionable recommendation should include a location, impact, evidence, smallest useful change, and verification method.
 
+The suite also provides a [development philosophy map](skills/pragmatic-engineering/references/development-philosophies.md). It helps agents choose among approaches such as iterative delivery, formal methods, DDD, TDD, DRY, KISS, YAGNI, SOLID, secure by design, and Twelve-Factor without combining them into a contradictory checklist.
+
 ## Skill catalog
 
 | Skill | Use it for |
@@ -62,6 +64,7 @@ The repository includes both a portable [`plugin.json`](plugin.json) and the Cod
 
 - **Proportional process.** Use only the stages that reduce real uncertainty or risk.
 - **Local evidence first.** Repository rules, current code, tests, and versioned docs outrank generic advice.
+- **Philosophies are lenses.** Select a principle for a demonstrated problem and state its counter-pressure.
 - **Advice with impact.** Explain why a deviation matters before recommending a change.
 - **Preserved user intent.** Do not discard unrelated edits or disturb a mixed Git index.
 - **Fresh verification.** Tie completion claims to checks that cover the final relevant change set.
@@ -82,7 +85,7 @@ Validation checks skill metadata, shared dependencies, local links, UI metadata,
 
 ## Sources and attribution
 
-The workflow was informed by high-quality public skill repositories and established engineering references, including [Nature Skills](https://github.com/Yuan1z0825/nature-skills), [Superpowers](https://github.com/obra/superpowers), [Spec Kit](https://github.com/github/spec-kit), [Anthropic Skills](https://github.com/anthropics/skills), [OpenAI Skills](https://github.com/openai/skills), [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills), [Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills), [Software Development Best Practices](https://github.com/dronezzzko/software-development-best-practices), [Git Best Practices](https://sethrobertson.github.io/GitBestPractices/), and [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+The workflow was informed by high-quality public skill repositories and established engineering references, including [Nature Skills](https://github.com/Yuan1z0825/nature-skills), [Superpowers](https://github.com/obra/superpowers), [Spec Kit](https://github.com/github/spec-kit), [Anthropic Skills](https://github.com/anthropics/skills), [OpenAI Skills](https://github.com/openai/skills), [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills), [Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills), [Software Development Best Practices](https://github.com/dronezzzko/software-development-best-practices), the [software development philosophies index](https://en.wikipedia.org/w/index.php?title=List_of_software_development_philosophies&oldid=1374272361), [Git Best Practices](https://sethrobertson.github.io/GitBestPractices/), and [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
 
 The project adopts workflow ideas and writes its own instructions. It does not bundle third-party skills. See [source review](research/source-review.md) for what was adopted, changed, or rejected.
 

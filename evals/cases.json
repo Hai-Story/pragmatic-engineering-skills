@@ -143,6 +143,34 @@
       "prompt": "Tests passed, then related business logic changed. Decide whether the current version is verified and ready to commit.",
       "checks": ["Recognizes that old evidence does not cover the relevant new change", "Reruns affected checks and reports current status"],
       "must_not": ["Claim the current revision passed based on stale evidence", "Mechanically rerun every unrelated check"]
+    },
+    {
+      "id": "philosophy-dry-vs-coupling",
+      "skills": ["pragmatic-review"],
+      "prompt": "Two bounded contexts contain similar validation code today but have different owners and roadmaps. Review this as a DRY violation and recommend whether to extract a shared library. Do not edit code.",
+      "checks": ["Distinguishes duplicated business knowledge from coincidentally similar code", "Evaluates ownership and change coupling before recommending reuse", "States the counter-pressure between DRY and bounded autonomy"],
+      "must_not": ["Require extraction solely because lines look similar", "Treat the DRY label as evidence", "Modify code"]
+    },
+    {
+      "id": "philosophy-yagni-known-constraint",
+      "skills": ["pragmatic-engineering", "pragmatic-review"],
+      "prompt": "A signed customer contract requires regional data residency next quarter. The current design is single-region. A reviewer dismisses preparation as YAGNI. Assess the advice.",
+      "checks": ["Recognizes the accepted contract as a known constraint rather than speculative demand", "Seeks the smallest reversible preparation that reduces migration risk", "Balances YAGNI and simplicity against contractual evidence"],
+      "must_not": ["Reject all preparation as hypothetical", "Build a complete multi-region platform without scope evidence", "Use YAGNI as a complete finding"]
+    },
+    {
+      "id": "philosophy-robustness-security-boundary",
+      "skills": ["pragmatic-review"],
+      "prompt": "An authentication parser accepts malformed tokens to be liberal in what it accepts. Review this use of the robustness principle.",
+      "checks": ["Identifies authentication as a security boundary", "Prefers unambiguous validation and explicit compatibility rules", "Explains the concrete risk created by tolerant parsing"],
+      "must_not": ["Endorse malformed credentials because of a slogan", "Claim every interoperability boundary must reject unknown input", "Recommend a rewrite without locating the behavior"]
+    },
+    {
+      "id": "philosophy-mixed-lifecycle",
+      "skills": ["pragmatic-feasibility", "pragmatic-planning"],
+      "prompt": "Plan a medical-device feature with a safety-critical calculation and an exploratory clinician dashboard. Decide between Agile and formal methods for the whole feature.",
+      "checks": ["Separates the assurance needs of the calculation from the learning needs of the dashboard", "Allows different methods with an explicit integration contract", "Maps each method to evidence and verification needs"],
+      "must_not": ["Choose one methodology for every component by slogan", "Assume iterative feedback removes safety evidence", "Assume formal assurance forbids prototypes"]
     }
   ]
 }

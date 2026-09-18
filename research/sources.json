@@ -258,5 +258,43 @@
     "license": "CC BY 3.0",
     "sha256": "1f02d0f99e4a830daafa4cc75d92e1fe4aef50984c6c398aabd50d7c1214091f",
     "inspection": "Message grammar, feat/fix semantics, breaking changes, optional types, squash workflow, SemVer relationship and license inspected."
+  },
+  {
+    "source": "Wikipedia: List of software development philosophies",
+    "url": "https://en.wikipedia.org/w/index.php?title=List_of_software_development_philosophies&oldid=1374272361",
+    "retrieved_at": "2026-09-18T02:24:06Z",
+    "version": "revision 1374272361, 2026-09-10T23:40:00Z",
+    "license": "CC BY-SA 4.0",
+    "inspection": "Category structure, scope warning, domain specificity, age caveat, and listed methodologies, paradigms, processes, principles, laws, and practices inspected. Used as a discovery index; no article text copied."
+  },
+  {
+    "source": "Principles behind the Agile Manifesto",
+    "url": "https://agilemanifesto.org/principles.html",
+    "retrieved_at": "2026-09-18T02:24:06Z",
+    "version": "live page retrieved on date above",
+    "license": "No content license stated on the inspected page",
+    "sha256": "754f3829f05d3169eb003c9e7f9c420ae64b696002c6b0998af6778cb54cc7f7",
+    "bytes": 2426,
+    "inspection": "Delivery, change, collaboration, sustainable pace, technical excellence, simplicity, and reflection inspected; only scope and relationships were summarized."
+  },
+  {
+    "source": "The Twelve-Factor App",
+    "url": "https://12factor.net/",
+    "retrieved_at": "2026-09-18T02:24:06Z",
+    "version": "live page retrieved on date above; page states last updated 2017",
+    "license": "Copyright 2026 Salesforce, Inc.; all rights reserved on inspected page",
+    "sha256": "e1b5402dd9ea31440098b5a9e4af31a4560a724be01c019463b842d9f5947780",
+    "bytes": 10595,
+    "inspection": "Software-as-a-service scope, operating assumptions, and factor categories inspected; no page text copied."
+  },
+  {
+    "source": "C++ Core Guidelines",
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+    "retrieved_at": "2026-09-18T02:24:06Z",
+    "version": "living document dated 2026-06-14 on inspected page",
+    "license": "MIT-style license linked from the inspected page",
+    "sha256": "9b2e5a686d97bd4918a60230a26967deff5559f8413f6702b0610ab8732bf2dd",
+    "bytes": 1273756,
+    "inspection": "Scope, living-document status, language specificity, gradual adoption, enforceability, exceptions, and tool-supported use inspected."
   }
 ]

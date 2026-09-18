@@ -2,6 +2,8 @@
 
 Use practices as context-sensitive decision aids. A popular checklist is a source of candidates, not automatic authority over a repository.
 
+When a request names a development philosophy, compares methodologies, or asks for a broad best-practice audit, read [Selecting Development Philosophies](development-philosophies.md). It separates lifecycle methods, design principles, code heuristics, deployment models, and team practices so rules from different levels are not mixed accidentally.
+
 ## Source order
 
 Prefer evidence in this order when sources conflict:
@@ -28,6 +30,12 @@ Before recommending or adopting a practice, answer:
 - How will the team know whether the change helped?
 
 Prefer a narrow rule with an objective check over a broad slogan.
+
+## Use principles as competing lenses
+
+Most useful principles have a counter-pressure. DRY can increase coupling, fail-fast can reduce availability, reuse can transfer ownership risk, and release speed can conflict with assurance. Select the principle that addresses the demonstrated problem, state the counter-pressure, and explain why the tradeoff fits this project.
+
+Do not use a philosophy label as evidence. Translate it into a local objective, an observed mismatch, a material impact, and a verifiable result.
 
 ## Advise on nonconforming code
 

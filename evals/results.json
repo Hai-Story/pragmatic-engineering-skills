@@ -20,6 +20,10 @@
     {"id": "retrospective-single-case", "status": "not_run"},
     {"id": "router-bounded-task", "status": "not_run"},
     {"id": "non-development-negative-trigger", "status": "not_run"},
-    {"id": "verification-version-drift", "status": "not_run"}
+    {"id": "verification-version-drift", "status": "not_run"},
+    {"id": "philosophy-dry-vs-coupling", "status": "not_run"},
+    {"id": "philosophy-yagni-known-constraint", "status": "not_run"},
+    {"id": "philosophy-robustness-security-boundary", "status": "not_run"},
+    {"id": "philosophy-mixed-lifecycle", "status": "not_run"}
   ]
 }

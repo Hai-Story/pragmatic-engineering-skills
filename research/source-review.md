@@ -84,8 +84,18 @@ Adopted: the message grammar, `feat` and `fix` meaning, breaking-change markers,
 
 Changed: the convention is enforced only when repository documentation or automation adopts it. Types and scopes come from project policy. In squash workflows, the final merge artifact may be the only message that must conform.
 
+## Wikipedia software development philosophies index
+
+Inspected the pinned 10 September 2026 revision of Wikipedia's [List of software development philosophies](https://en.wikipedia.org/w/index.php?title=List_of_software_development_philosophies&oldid=1374272361), including its groupings for large-scale styles, specification paradigms, comprehensive methodologies, rules of thumb, programming paradigms, development methodologies, and processes.
+
+Adopted: the breadth of the index revealed that engineering advice operates at different levels. The suite now separates lifecycle and feedback models, product and behavior practices, domain and structural design, implementation heuristics, verification and failure handling, runtime and deployment models, and team organization. It also records common tensions such as DRY versus loose coupling, fail-fast versus graceful degradation, and release speed versus assurance.
+
+Changed: Wikipedia is used only as a discovery index. The page itself warns that entries vary by domain, age, and current use, and it mixes methods, paradigms, processes, principles, and laws. The suite therefore does not copy the catalog, rank philosophies, or make every entry a rule. Material recommendations still require a primary maintained source and evidence that its assumptions fit the project.
+
+The synthesis cross-checked three representative primary sources: the [Agile principles](https://agilemanifesto.org/principles.html) for the relationship between feedback, technical excellence, sustainability, simplicity, and reflection; the [Twelve-Factor App](https://12factor.net/) for its software-as-a-service scope; and the [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) for technology-specific, gradually adopted, tool-supported guidance. These checks support the rule that a philosophy must retain its original scope and assumptions.
+
 ## Original synthesis
 
-The resulting design uses one router, ten specialist skills, and four shared references. Specialist skills do not call the router, which avoids circular routing. The classification of nonconforming code into defect, project-rule violation, contextual risk, and optional improvement is the suite's central original synthesis.
+The resulting design uses one router, ten specialist skills, and five shared references. Specialist skills do not call the router, which avoids circular routing. The classification of nonconforming code into defect, project-rule violation, contextual risk, and optional improvement, combined with explicit counter-pressures between philosophies, is the suite's central original synthesis.
 
 Only workflow ideas are attributed here. Third-party scripts, templates, and skills are not redistributed. A repository-level license does not always govern every subdirectory, so any future direct reuse must verify the exact file, revision, and license obligations.

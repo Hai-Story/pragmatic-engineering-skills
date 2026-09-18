@@ -37,4 +37,4 @@ Choose only the stages that resolve the current uncertainty. A one-line copy fix
 
 For each acceptance criterion, report one of: completed and verified, completed but not verified, pending a decision, or blocked. Tie claims to current evidence. A passing formatter does not prove behavior; an old test run does not cover code changed afterward.
 
-Load the [practice selection guide](references/practices.md) only when judging a practice or proposing a new rule. Load [Git practices](references/git-practices.md) for commit or history work.
+Load the [practice selection guide](references/practices.md) only when judging a practice or proposing a new rule. It routes named philosophies and methodology comparisons to the [development philosophy guide](references/development-philosophies.md). Load [Git practices](references/git-practices.md) for commit or history work.
