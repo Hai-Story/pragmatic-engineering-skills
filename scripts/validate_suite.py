@@ -160,10 +160,21 @@ def validate(root: Path | str) -> tuple[list[str], int]:
 
     common = root / "pragmatic-engineering/references/working-agreement.md"
     git_guide = root / "pragmatic-engineering/references/git-practices.md"
+    practices = root / "pragmatic-engineering/references/practices.md"
+    philosophy_guide = root / "pragmatic-engineering/references/development-philosophies.md"
     if not common.is_file():
         errors.append("Missing shared working agreement.")
     if not git_guide.is_file():
         errors.append("Missing shared Git practices.")
+    if not philosophy_guide.is_file():
+        errors.append("Missing shared development philosophy guide.")
+    if practices.is_file():
+        targets = [
+            unquote(urlsplit(link).path)
+            for link in LINK.findall(practices.read_text(encoding="utf-8"))
+        ]
+        if not any((practices.parent / target).resolve() == philosophy_guide for target in targets):
+            errors.append("Practice selection guide does not route to development philosophies.")
 
     names: set[str] = set()
     for entry in entries:

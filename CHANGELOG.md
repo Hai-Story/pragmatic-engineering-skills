@@ -4,6 +4,10 @@ All notable changes to this project will be documented here. The format is based
 
 ## [Unreleased]
 
+### Added
+
+- A context map for selecting and reconciling software development philosophies.
+
 ## [0.1.0] - 2026-09-18
 
 ### Added

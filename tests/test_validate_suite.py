@@ -43,6 +43,11 @@ class SuiteValidationTests(unittest.TestCase):
         errors, _ = self.validate()
         self.assertTrue(any("Missing shared Git practices" in error for error in errors))
 
+    def test_missing_development_philosophy_guide(self):
+        (self.root / "pragmatic-engineering/references/development-philosophies.md").unlink()
+        errors, _ = self.validate()
+        self.assertTrue(any("Missing shared development philosophy" in error for error in errors))
+
     def test_commit_skill_must_route_to_git_practices(self):
         file = self.root / "pragmatic-commits/SKILL.md"
         file.write_text(file.read_text().replace(
