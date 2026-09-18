@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Implementation"
+  short_description: "Implement focused changes with local evidence"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-implementation to implement this change and verify the result."
+policy:
+  allow_implicit_invocation: true

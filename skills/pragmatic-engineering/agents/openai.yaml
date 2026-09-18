@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Engineering"
+  short_description: "Route software work through the right workflow"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-engineering to take this software task from intent to verified result."
+policy:
+  allow_implicit_invocation: true

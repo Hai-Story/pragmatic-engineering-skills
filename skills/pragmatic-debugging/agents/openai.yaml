@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Debugging"
+  short_description: "Diagnose failures with evidence and experiments"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-debugging to reproduce, diagnose, and fix this failure."
+policy:
+  allow_implicit_invocation: true

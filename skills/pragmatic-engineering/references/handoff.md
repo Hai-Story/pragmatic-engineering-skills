@@ -1,0 +1,39 @@
+# Handoff Record
+
+Use a durable handoff for multi-stage, multi-person, or multi-session work. Keep small tasks in the conversation when a file would add ceremony without reducing risk.
+
+## Minimal record
+
+```markdown
+# <work item>
+
+## Objective
+<observable user or system outcome>
+
+## Scope
+- In: ...
+- Out: ...
+
+## Acceptance
+- [ ] ...
+
+## Constraints
+- Repository rules: ...
+- Compatibility/security/operational constraints: ...
+
+## Decisions and unknowns
+- Decided: ... because ...
+- Open: ... blocks/does not block ...
+
+## Evidence
+- Inspected: ...
+- Verified: command/check → result → relevant revision
+
+## Next work
+- Owner: ...
+- Task: ...
+- Inputs and outputs: ...
+- Integration dependency: ...
+```
+
+Update the record when a decision changes scope, an acceptance criterion changes, or new evidence invalidates an earlier assumption. Do not duplicate long logs; link to the artifact that contains them.

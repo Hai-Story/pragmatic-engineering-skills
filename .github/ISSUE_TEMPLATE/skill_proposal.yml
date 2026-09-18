@@ -1,0 +1,38 @@
+name: Skill or workflow proposal
+description: Propose a new workflow or a material change to an existing one
+title: "proposal: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: failure
+    attributes:
+      label: Problem or failure mode
+      description: Describe the recurring engineering problem this should prevent.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Representative request
+      description: Provide a realistic user prompt or repository situation.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected observable behavior
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: When it should not apply
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation approach
+      description: Explain how a reviewer can distinguish success from failure.
+    validations:
+      required: true

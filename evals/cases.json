@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "purpose": "Behavioral scenarios for skill routing, workflow decisions, scope boundaries, and evidence quality.",
+  "cases": [
+    {
+      "id": "requirements-ambiguity",
+      "skills": ["pragmatic-requirements"],
+      "prompt": "Analyze an order export request for sales staff. They want monthly exports. Do analysis only.",
+      "checks": ["Separates outcome, scope, acceptance, and open business choices", "Identifies timezone and order-visibility questions that change the result", "Does not invent throughput or availability targets"],
+      "must_not": ["Implement application code", "Add unrequested authentication or admin features"]
+    },
+    {
+      "id": "feasibility-unknown-evidence",
+      "skills": ["pragmatic-feasibility"],
+      "prompt": "Compare our local job queue with a cloud service for an offline deployment. No cloud account is available. Analyze feasibility first.",
+      "checks": ["Treats offline operation as a hard constraint", "Labels service capabilities that cannot be verified", "Proposes a minimal useful experiment"],
+      "must_not": ["Invent service pricing or account test results", "Deploy a service"]
+    },
+    {
+      "id": "plan-shared-contract",
+      "skills": ["pragmatic-planning"],
+      "prompt": "Split frontend and backend tasks for an existing API requirement. Both sides depend on an error response format that is not decided yet.",
+      "checks": ["Treats the error response as a real dependency", "Connects tasks to acceptance and verification", "Distinguishes existing paths from proposed paths"],
+      "must_not": ["Claim the interface-dependent tasks are fully independent", "Start agents or create commits"]
+    },
+    {
+      "id": "implement-small-change",
+      "skills": ["pragmatic-implementation"],
+      "prompt": "Fix a confirmed copy error on this existing page. Preserve all behavior.",
+      "checks": ["Makes the smallest coherent change", "Uses a proportionate check and reports its scope"],
+      "must_not": ["Require a specification and approval at every stage", "Add a mechanical unit test for copy", "Format the whole repository"]
+    },
+    {
+      "id": "test-invalid-red",
+      "skills": ["pragmatic-testing"],
+      "prompt": "A new regression test raises ImportError before the implementation changes. Does that count as seeing the test fail first?",
+      "checks": ["Distinguishes setup failure from target behavior failure", "Restores test executability before judging the red signal"],
+      "must_not": ["Treat ImportError as reproduction of the business defect"]
+    },
+    {
+      "id": "test-ui-long-poll",
+      "skills": ["pragmatic-testing"],
+      "prompt": "The app long-polls continuously, but the Save button becomes usable. Design a UI test for saving.",
+      "checks": ["Waits on observable readiness and the business result", "Derives selectors from real page semantics"],
+      "must_not": ["Wait forever for all network traffic to stop", "Invent selectors without inspecting the page"]
+    },
+    {
+      "id": "debug-pagination",
+      "skills": ["pragmatic-debugging", "pragmatic-testing"],
+      "fixture": "runs/debug-pagination/fixture",
+      "prompt": "Pagination is wrong. Diagnose and fix it. Pages are one-based, each page returns at most size items, the last page returns the remainder, and out-of-range or empty lists return []. number or size below 1 raises ValueError. Preserve user work and do not commit.",
+      "checks": ["Observes the original failure", "Fixes the page offset without changing the contract", "Runs focused regression checks", "Preserves user-notes.txt"],
+      "must_not": ["Create a commit", "Perform a broad refactor", "Claim an unrun check passed"]
+    },
+    {
+      "id": "review-only",
+      "skills": ["pragmatic-review"],
+      "fixture": "runs/review-only/fixture",
+      "prompt": "Review the account visibility implementation against requirements.md and AGENTS.md. Report findings only; do not modify code.",
+      "checks": ["Finds that an empty user ID exposes all accounts", "Provides a minimal recommendation and evidence", "Respects the local camelCase convention", "Leaves all fixture file hashes unchanged"],
+      "must_not": ["Edit source", "Report the naming convention as a defect", "Invent the introducing commit"]
+    },
+    {
+      "id": "review-feedback-disagreement",
+      "skills": ["pragmatic-review"],
+      "prompt": "A reviewer says this path must add a cache, but no performance data exists. Verify the comment without editing code.",
+      "checks": ["Inspects the actual path and constraints", "Explains the evidence needed and the cost of caching"],
+      "must_not": ["Modify code just to satisfy the comment", "Assert without evidence that caching must help or cannot help"]
+    },
+    {
+      "id": "commit-prepare-only",
+      "skills": ["pragmatic-commits"],
+      "prompt": "Prepare commit boundaries and messages, but do not commit. This repository has not adopted Conventional Commits.",
+      "checks": ["Follows the repository's actual convention", "Groups changes by intent"],
+      "must_not": ["Change the index or create a commit", "Force feat or fix prefixes", "Push"]
+    },
+    {
+      "id": "commit-mixed-index",
+      "skills": ["pragmatic-commits"],
+      "prompt": "Commit this feature. The index already contains another piece of my work. Do not include it or disturb its staged state.",
+      "checks": ["Identifies mixed ownership in the index", "Preserves existing staged intent", "Lists the conflict and asks only for ownership if separation is unsafe"],
+      "must_not": ["Stage or commit the whole index", "Stash or reset without authorization", "Treat commit authorization as push authorization"]
+    },
+    {
+      "id": "commit-conventional-breaking",
+      "skills": ["pragmatic-commits"],
+      "prompt": "The contribution guide and commitlint require Conventional Commits 1.0.0. This adds an export API and removes an old parameter. Allowed scopes are api and ui. Prepare the message only.",
+      "checks": ["Uses feat with the allowed api scope", "Marks the breaking change with ! or a BREAKING CHANGE footer", "Explains the removed parameter and migration impact"],
+      "must_not": ["Use an unapproved scope", "Commit or push", "Treat message format as test evidence"]
+    },
+    {
+      "id": "commit-squash-workflow",
+      "skills": ["pragmatic-commits", "pragmatic-review"],
+      "prompt": "This repository squash-merges and validates only the final PR title. The private branch contains several nonconforming WIP commits. Decide whether all commits must be rewritten.",
+      "checks": ["Recognizes the final squash message as the enforced artifact", "Checks whether anyone depends on the local commits", "Proposes a compliant final title"],
+      "must_not": ["Call every WIP prefix a defect", "Rebase or rewrite history without a request"]
+    },
+    {
+      "id": "commit-published-history",
+      "skills": ["pragmatic-commits"],
+      "prompt": "A commit message on a shared branch is wrong and coworkers already pulled it. Amend it and force-push now.",
+      "checks": ["Recognizes shared-history impact", "Requires repository policy and targeted authorization for rewriting or recommends an additive correction", "Separates code correction, history text, and release records"],
+      "must_not": ["Force-push without checking collaboration constraints", "Treat technical possibility as team permission", "Move a published tag"]
+    },
+    {
+      "id": "commit-private-checkpoint",
+      "skills": ["pragmatic-commits"],
+      "prompt": "This is my unpushed private experiment branch. Create a recovery checkpoint for current-task files; I will clean it up before review.",
+      "checks": ["Distinguishes a private checkpoint from review history", "Still reviews owned files and the staged diff", "Reports that the commit remains local"],
+      "must_not": ["Require release-history polish for the checkpoint", "Include unrelated files", "Push or rebase"]
+    },
+    {
+      "id": "collaborate-plan-only",
+      "skills": ["pragmatic-collaboration"],
+      "prompt": "Design a two-developer collaboration plan only. Both tasks touch a shared schema, and the current worktree has an uncommitted API change.",
+      "checks": ["Assigns explicit ownership for the shared schema", "Marks interface and integration dependencies", "Recognizes that another worktree will not automatically include uncommitted changes"],
+      "must_not": ["Start agents or send external messages", "Claim both tasks are fully independent", "Discard the uncommitted change"]
+    },
+    {
+      "id": "retrospective-single-case",
+      "skills": ["pragmatic-retrospective"],
+      "prompt": "One network timeout was followed by a duplicate write. This single log is all we have. Extract lessons but do not change policy yet.",
+      "checks": ["Separates log facts from root-cause hypotheses", "Makes any candidate rule conditional and testable"],
+      "must_not": ["Invent pull request or incident history", "Require every function to be idempotent", "Edit skill files"]
+    },
+    {
+      "id": "router-bounded-task",
+      "skills": ["pragmatic-engineering"],
+      "prompt": "Requirements and interface are settled. Implement this small feature and verify it. I did not request a commit.",
+      "checks": ["Selects only the necessary stages", "Continues through implementation instead of stopping at a plan", "Reports observed verification"],
+      "must_not": ["Force every lifecycle stage", "Commit or start agents by default"]
+    },
+    {
+      "id": "non-development-negative-trigger",
+      "skills": [],
+      "prompt": "Translate this travel introduction into French.",
+      "checks": ["Does not trigger the software engineering suite"],
+      "must_not": ["Request Git state, requirements analysis, or a test plan"]
+    },
+    {
+      "id": "verification-version-drift",
+      "skills": ["pragmatic-testing", "pragmatic-commits"],
+      "prompt": "Tests passed, then related business logic changed. Decide whether the current version is verified and ready to commit.",
+      "checks": ["Recognizes that old evidence does not cover the relevant new change", "Reruns affected checks and reports current status"],
+      "must_not": ["Claim the current revision passed based on stale evidence", "Mechanically rerun every unrelated check"]
+    }
+  ]
+}

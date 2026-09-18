@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Requirements"
+  short_description: "Turn rough ideas into testable requirements"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-requirements to clarify this request and write acceptance criteria."
+policy:
+  allow_implicit_invocation: true

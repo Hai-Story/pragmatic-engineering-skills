@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Testing"
+  short_description: "Design risk-based tests and verify behavior"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-testing to design and run the right tests for this change."
+policy:
+  allow_implicit_invocation: true

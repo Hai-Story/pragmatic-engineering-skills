@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Review"
+  short_description: "Review code for concrete, material risks"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-review to review this change and prioritize evidence-backed findings."
+policy:
+  allow_implicit_invocation: true

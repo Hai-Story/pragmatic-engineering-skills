@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Feasibility"
+  short_description: "Compare options and test risky assumptions"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-feasibility to evaluate these technical options and recommend a path."
+policy:
+  allow_implicit_invocation: true

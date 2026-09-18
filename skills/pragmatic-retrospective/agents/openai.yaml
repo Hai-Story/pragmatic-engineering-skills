@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Retrospective"
+  short_description: "Turn project evidence into bounded lessons"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-retrospective to extract actionable lessons from this work."
+policy:
+  allow_implicit_invocation: true

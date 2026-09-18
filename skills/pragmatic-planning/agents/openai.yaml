@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Planning"
+  short_description: "Build an executable, verifiable change plan"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-planning to turn this requirement into executable engineering tasks."
+policy:
+  allow_implicit_invocation: true

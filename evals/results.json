@@ -1,0 +1,25 @@
+{
+  "method": "Two independent explicit-skill smoke trials, followed by artifact review. No baseline comparison or automatic-routing evaluation was performed.",
+  "cases": [
+    {"id": "requirements-ambiguity", "status": "not_run"},
+    {"id": "feasibility-unknown-evidence", "status": "not_run"},
+    {"id": "plan-shared-contract", "status": "not_run"},
+    {"id": "implement-small-change", "status": "not_run"},
+    {"id": "test-invalid-red", "status": "not_run"},
+    {"id": "test-ui-long-poll", "status": "not_run"},
+    {"id": "debug-pagination", "status": "passed", "result": "runs/debug-pagination/result.md", "evidence": "An independent run reproduced the offset failure, fixed one-based pagination, and passed 10 tests. Parent review confirmed protected files were unchanged."},
+    {"id": "review-only", "status": "passed", "result": "runs/review-only/result.md", "evidence": "An independent run found the empty-user account disclosure, respected local naming, and left all fixture files unchanged."},
+    {"id": "review-feedback-disagreement", "status": "not_run"},
+    {"id": "commit-prepare-only", "status": "not_run"},
+    {"id": "commit-mixed-index", "status": "not_run"},
+    {"id": "commit-conventional-breaking", "status": "not_run"},
+    {"id": "commit-squash-workflow", "status": "not_run"},
+    {"id": "commit-published-history", "status": "not_run"},
+    {"id": "commit-private-checkpoint", "status": "not_run"},
+    {"id": "collaborate-plan-only", "status": "not_run"},
+    {"id": "retrospective-single-case", "status": "not_run"},
+    {"id": "router-bounded-task", "status": "not_run"},
+    {"id": "non-development-negative-trigger", "status": "not_run"},
+    {"id": "verification-version-drift", "status": "not_run"}
+  ]
+}

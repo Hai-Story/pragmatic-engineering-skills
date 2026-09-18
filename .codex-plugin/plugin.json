@@ -1,0 +1,34 @@
+{
+  "name": "pragmatic-engineering",
+  "version": "0.1.0",
+  "description": "Evidence-driven software engineering workflows from requirements to verified delivery.",
+  "author": {
+    "name": "Pragmatic Engineering Skills Contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "software-engineering",
+    "code-review",
+    "testing",
+    "git"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Pragmatic Engineering",
+    "shortDescription": "Evidence-driven workflows for reliable software delivery",
+    "longDescription": "A suite of context-sensitive skills for requirements, feasibility, planning, implementation, testing, debugging, review, Git commits, collaboration, and retrospectives.",
+    "developerName": "Pragmatic Engineering Skills Contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Take this software task from intent to verified result.",
+      "Review this change and prioritize material findings.",
+      "Diagnose this failure before proposing a fix."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Collaboration"
+  short_description: "Partition parallel work and integrate safely"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-collaboration to split this work with clear ownership and integration gates."
+policy:
+  allow_implicit_invocation: true

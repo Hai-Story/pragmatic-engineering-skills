@@ -1,0 +1,43 @@
+name: Skill behavior bug
+description: Report incorrect routing, instructions, or observable agent behavior
+title: "bug: "
+labels: [bug]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Which pragmatic-* skill was invoked or expected?
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Exact request
+      description: Remove secrets and private repository content.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Host, model, repository rules, fixture revision, and relevant settings.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What incorrect result or risk did this behavior create?
+    validations:
+      required: true

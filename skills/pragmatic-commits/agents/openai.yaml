@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pragmatic Commits"
+  short_description: "Create coherent commits without disturbing work"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pragmatic-commits to organize these changes and prepare the right commit message."
+policy:
+  allow_implicit_invocation: true
